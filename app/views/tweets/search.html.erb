@@ -1,0 +1,45 @@
+<div class='content'>
+  <div class="row">
+
+    <%# 検索フォーム %>
+    <div class="col-md-6">
+      <div class="mx-auto text-center">
+        <div style="color: black; margin-top: 15vw;">
+          <a href="/" class="app_name">
+            <h1 style="font-size: 6vmax;">Look up.</h1>
+          </a>
+        </div>
+        <div id="search-box" class="form-group mt-4">
+          <%= form_tag("/", method: :get) do %>
+
+          <%# エラー %>
+          <% if @error.present? %>
+          <h6 style="color: red;"><%= @error %></h6>
+          <% end %>
+
+          <%= text_field_tag :tweet, nil, id: "tweet_search", name: "keyword", placeholder: "", style: "width: 100%;", class: "form-control" %><button
+            title="Search" type="submit" class="btn btn-block"
+            style="background-color: black; color: white;">search</button>
+          <% end %>
+        </div>
+
+        <%# 検索したワード %>
+        <div style="margin-top: 4vw;">
+          <% if @contents.present? %>
+          <h3 style="color: black; font-size: 3vmax;"><%= @keyword %></h3>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+
+
+    <%# 検索結果 %>
+    <div class="col-md-6">
+      <div id='tweet_list'>
+        <%= render partial: "tweet_list" %>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<% if @contents.present? %>
+<div class="scroll text-center" data-max="2" data-lastnum="10" style="backdrop-filter: blur(5px); margin-top: 5vw;">
+  <% @contents.each do |content| %>
+  <p style="color: black;"><%= content %></p>
+  <% end %>
+</div>
+<% else %>
+<div class="text-center" style="margin-top: 20vw;">
+  <%# <h1 style="color: black; font-size: 3vmax;">Babies learn language<br>with textbook? No.</h1> %>
+  <h1 style="color: black; font-size: 4vmax; margin-top: 20px;">Learn From Real.</h1>
+</div>
+<% end %>

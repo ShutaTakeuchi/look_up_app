@@ -1,0 +1,47 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body { 
+    background-image: image-url('yellow_pencil.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+
+.scroll {
+  overflow:auto;
+  width:auto;
+  height: 500px;
+}
+
+// スクロールバーを非表示にする
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+// .scroll img {
+//   height:180px;
+//   display:block;
+//   margin:1px;
+// }
+
+.app_name {
+  color: black;
+  text-decoration: none;
+}
+
+.app_name:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.app_name:active {
+  color: black;
+  text-decoration: none;
+}
+
+.app_name.no-color-change {
+  color: black;
+  text-decoration: none;
+}
